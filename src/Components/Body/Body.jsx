@@ -14,7 +14,9 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
+  // toast function
   const notification = () => toast("Already this card added");
+  // duplicate check function
 
   const handleCart = (BlogTitle) => {
     const exist = order.find((value) => value === BlogTitle);
@@ -24,7 +26,7 @@ const Body = () => {
     const newOrder = [...order, BlogTitle];
     setOrder(newOrder);
   };
-
+  // local storage set item function
   const additem = (time) => {
     const readingTime = JSON.parse(localStorage.getItem("readtime"));
     if (readingTime) {
@@ -38,7 +40,7 @@ const Body = () => {
   };
 
   return (
-    <div className="body">
+    <div className="body  grid sm:grid-cols-1">
       <div>
         {datas.map((data) => (
           <Card
