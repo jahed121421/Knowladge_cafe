@@ -12,11 +12,13 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
+  const doubleCLick = () => toast("Wow so easy!");
 
   const handleCart = (BlogTitle) => {
     const exist = order.find((item) => item.BlogTitle == BlogTitle);
     if (exist) {
-      return alert("This cart already added to cart");
+      doubleCLick();
+      return;
     }
     const newOrder = [...order, BlogTitle];
     setOrder(newOrder);
@@ -43,6 +45,7 @@ const Body = () => {
             handleCart={handleCart}
             key={data.id}
             additem={additem}
+            doubleCLick={doubleCLick}
           ></Card>
         ))}
       </div>

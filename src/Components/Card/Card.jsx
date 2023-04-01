@@ -1,10 +1,13 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const Card = (props) => {
   const { AuthorImg, AuthorName, BlogTitle, ReadTime, id, img, PublishDate } =
     props.data;
   const additem = props.additem;
   const handleCart = props.handleCart;
+  const doubleCLick = props.doubleCLick;
   return (
     <div className="card h-100 w-100 bg-base-100 shadow-xl my-5">
       <figure>
@@ -27,7 +30,8 @@ const Card = (props) => {
             onClick={() => handleCart(BlogTitle)}
             className="btn btn-ghost"
           >
-            {ReadTime} min read
+            {ReadTime} min read{" "}
+            <FontAwesomeIcon className="m-2" icon={faBookmark} />
           </button>
         </div>
         <h2 className="card-title">{BlogTitle}</h2>
