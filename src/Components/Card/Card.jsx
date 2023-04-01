@@ -40,7 +40,7 @@ const Card = (props) => {
         <span>
           <p
             onClick={() => additem(ReadTime)}
-            className="underline text-xl font-semibold text-blue-500"
+            className="underline text-xl font-semibold text-blue-500 cursor-pointer"
           >
             MARK AS READ
           </p>
