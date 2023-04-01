@@ -3,7 +3,7 @@ import React from "react";
 const Answer = () => {
   return (
     <div className="bg-green-100 p-10 rounded-lg shadow-black shadow-2xl">
-      <h1 className="my-10 sm:my-0 text-center sm:text-xl text-5xl font-bolder underline">
+      <h1 className="my-10 text-center text-xl uppercase font-bold underline">
         Answer of the question
       </h1>
       <ul>
@@ -27,7 +27,6 @@ const Answer = () => {
           Ans:
           <ul>
             <li>
-              {" "}
               useState have 2 values <br />
               useState work like hook and it can be used to keep track different
               data like strings number etc. <br />
