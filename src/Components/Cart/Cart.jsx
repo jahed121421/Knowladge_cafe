@@ -20,7 +20,9 @@ const Cart = (props) => {
           Bookmarks Blogs: {order.length}
         </h1>
         {order.map((ordered) => (
-          <li>{ordered}</li>
+          <div className="w-4/5 h-15 bg-white m-5 rounded-lg p-5 text-xl shadow-xl">
+            {ordered}
+          </div>
         ))}
       </div>
     </div>
