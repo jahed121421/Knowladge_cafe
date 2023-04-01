@@ -29,7 +29,7 @@ const Card = (props) => {
             onClick={() => handleCart(BlogTitle)}
             className="btn btn-ghost"
           >
-            {ReadTime} min read{" "}
+            {ReadTime} min read
             <FontAwesomeIcon className="m-2" icon={faBookmark} />
           </button>
         </div>
