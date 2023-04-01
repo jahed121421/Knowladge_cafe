@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import Cart from "../Cart/Cart";
 import "./Body.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Body = () => {
   const [datas, setDatas] = useState([]);
@@ -12,14 +14,12 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
-  const doubleCLick = () => toast("Wow so easy!");
+  const notification = () => toast("Already this card added");
 
   const handleCart = (BlogTitle) => {
-    console.log(BlogTitle);
-    const exist = order.find((value) => value.BlogTitle === BlogTitle);
+    const exist = order.find((value) => value === BlogTitle);
     if (exist) {
-      console.log("click me");
-      doubleCLick();
+      notification();
     }
     const newOrder = [...order, BlogTitle];
     setOrder(newOrder);
@@ -52,6 +52,7 @@ const Body = () => {
       <div className="w-full m-5">
         <Cart readtime={readtime} order={order}></Cart>
       </div>
+      <ToastContainer />
     </div>
   );
 };
