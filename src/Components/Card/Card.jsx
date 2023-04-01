@@ -8,7 +8,7 @@ const Card = (props) => {
   const additem = props.additem;
   const handleCart = props.handleCart;
   return (
-    <div className="card h-100 w-100 bg-base-100 shadow-xl my-5">
+    <div className="card h-100 w-4/5 bg-base-100 shadow-xl my-5">
       <figure>
         <img className="w-full h-full" src={img} alt="" />
       </figure>
