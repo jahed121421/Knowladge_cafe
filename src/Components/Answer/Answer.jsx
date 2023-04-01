@@ -2,7 +2,7 @@ import React from "react";
 
 const Answer = () => {
   return (
-    <div className="bg-green-100 p-10 rounded">
+    <div className="bg-green-100 p-10 rounded-lg shadow-black shadow-2xl">
       <h1 className="my-10 text-center text-5xl font-bolder underline">
         Answer of the question
       </h1>
@@ -62,10 +62,10 @@ const Answer = () => {
         <li className="font-bold text-2xl">4: How does react work?</li>
         <li>
           Ans: <br />
-          React is a JavaScript library (not a framework) that creates user
-          interfaces (UIs) in a predictable and efficient way using declarative
-          code. You can use it to help build single page applications and mobile
-          apps, or to build complex apps if you utilise it with other libraries.
+          React is a JavaScript library that creates user interfaces in a
+          predictable and efficient way using declarative code. You can use it
+          to help build single page applications and mobile apps, or to build
+          complex apps if you utilise it with other libraries.
         </li>
       </ul>
     </div>
