@@ -7,7 +7,6 @@ const Card = (props) => {
     props.data;
   const additem = props.additem;
   const handleCart = props.handleCart;
-  const doubleCLick = props.doubleCLick;
   return (
     <div className="card h-100 w-100 bg-base-100 shadow-xl my-5">
       <figure>

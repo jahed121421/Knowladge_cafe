@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 const Cart = (props) => {
-  console.log(props);
   const readtime = props.readtime;
   const order = props.order;
   const [time, setTime] = useState(readtime);

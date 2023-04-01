@@ -15,10 +15,11 @@ const Body = () => {
   const doubleCLick = () => toast("Wow so easy!");
 
   const handleCart = (BlogTitle) => {
-    const exist = order.find((item) => item.BlogTitle == BlogTitle);
+    console.log(BlogTitle);
+    const exist = order.find((value) => value.BlogTitle === BlogTitle);
     if (exist) {
+      console.log("click me");
       doubleCLick();
-      return;
     }
     const newOrder = [...order, BlogTitle];
     setOrder(newOrder);
@@ -45,7 +46,6 @@ const Body = () => {
             handleCart={handleCart}
             key={data.id}
             additem={additem}
-            doubleCLick={doubleCLick}
           ></Card>
         ))}
       </div>
